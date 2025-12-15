@@ -375,3 +375,128 @@ using namespace std;
 //     parent s;
     
 // }
+
+
+//--------------------Abstarction------------------------//
+// class saini{
+//     public:
+//     virtual void  foo()=0;
+// };
+// class saini1:public saini{
+//     public:
+//     void foo() override{
+//         cout<<"I am saini1"<<endl;
+//     }
+// };
+// class saini2: public saini{
+//     public:
+//     void foo() override{
+//         cout<<"I am saini2"<<endl;
+//     }
+// };
+// int main(){
+//     // saini1 s;
+//     // saini2 s2;
+//     // s.foo();
+//     // s2.foo();
+//     saini1 *s1=new saini1;
+//     s1->foo();
+//     saini2 *s2=new saini2;
+//     s2->foo();
+// }
+
+//------------------------polimorphism--------------------------------//
+//-----------compile time polimorphism---
+//----------function overloading------------
+
+
+// class saini{
+//     int x=2;
+//     public:
+//     void foo(int x){
+//         this->x=x;
+//         cout<<"Change x value is: "<<x<<endl;
+//     }
+//     int foo(){
+//         return x;
+//     }
+// };
+// int main(){
+//     saini s;
+//     s.foo(3);
+//     cout<<s.foo();
+// }
+
+
+// void foo(int x){
+//         cout<<"X: "<<x<<endl;
+// }
+// int foo(int x,int y){
+//     return x*y;
+// }
+// float foo(float x,float y){
+//     return x*y;
+// }
+// string foo(string x){
+// return x;
+// }
+
+// int main(){
+//     foo(2);
+//     cout<<foo(2,4)<<endl;
+//     cout<<"String: "<<foo("Saini")<<endl;
+//     cout<<foo(2.4f,4.1f);
+// }
+
+
+
+//----------------run time polimorphism-----------------//
+// class saini{
+//     public:
+//     virtual void foo(){
+//         cout<<"I am saini"<<endl;
+//     }
+// };
+// class child1: public saini{
+//     public:
+//     void foo()override{
+//         cout<<"I am child1"<<endl;
+//     }
+// };
+// class child2: public saini{
+//     public:
+//     void foo() override{
+//         cout<<"I am child2"<<endl;
+//     }
+// };
+// int main(){
+//     saini* ptr;
+
+//     child1 c1;
+//     child2 c2;
+
+//     ptr = &c1;
+//     ptr->foo();   // I am child1
+
+//     ptr = &c2;
+//     ptr->foo();   // I am child2
+
+// }
+
+
+class Base {
+public:
+    virtual void show() {
+        cout << "Base show" << endl;
+    }
+};
+class Derived : public Base {
+public:
+    void show() override {
+        cout << "Derived show" << endl;
+    }
+};
+int main() {
+    Base* b = new Derived;
+    b->show();   // Runtime polymorphism
+}
