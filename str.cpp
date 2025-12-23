@@ -44,3 +44,42 @@
 //     cout<<ans;
 //     return 0;
 // }
+
+
+
+
+
+//-------------------------remove integer and special character  from an array --------------------//
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     string s;
+//     getline(cin,s);
+//     string res="";
+//     for(int i=0;i<s.length();i++){
+//         if(isalpha(s[i])){
+//             s[i]=tolower(s[i]);
+//             res+=s[i];
+//         }else if(s[i]==' '){
+//             res+=" ";
+//         }
+//     }
+//     cout<<res;
+// }
+
+
+//---------------------------Palindrome string or not-----------------------------
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     string s;
+//     getline(cin,s);
+//     string res="";
+//     for(int i=s.length()-1;i>=0;i--){
+//         res+=s[i];
+//     }
+//     if(res==s)cout<<"Palindrome";
+//     else cout<<"Not palindrome";
+// }
+
+//--------------------------
