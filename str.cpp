@@ -1,0 +1,46 @@
+
+//-----------count frequecy of words in string------------------------//
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     string s;
+//     getline(cin,s);
+//     unordered_map<string,int>map;
+//     string res="";
+//     for(int i=0;i<s.length();i++){
+//         res+=s[i];
+//         if(s[i]==' '){
+//             map[res]++;
+//             res="";
+//         }
+//     }
+//     map[res]++;
+
+//     for(auto it=map.begin();it!=map.end();it++){
+//         cout<<it->first<<" present "<<it->second<<" times"<<endl;
+//     }
+//     return 0;
+// }
+
+//-----------------------longest word from an string-------------------------------//
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     string s;
+//     getline(cin,s);
+//     string res="";
+//     string ans="";
+//     for(int i=0;i<s.length();i++){
+//         res+=s[i];
+//         if(s[i]==' '){
+//             int s=res.length();
+//             if(s>ans.length())ans=res;
+//             res="";
+//         }
+//     }
+//     if(res.length()>=ans.length())ans=res;
+//     cout<<ans;
+//     return 0;
+// }

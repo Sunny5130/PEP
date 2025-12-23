@@ -471,18 +471,13 @@ using namespace std;
 // };
 // int main(){
 //     saini* ptr;
-
 //     child1 c1;
 //     child2 c2;
-
 //     ptr = &c1;
 //     ptr->foo();   // I am child1
-
 //     ptr = &c2;
 //     ptr->foo();   // I am child2
-
 // }
-
 
 class Base {
 public:
