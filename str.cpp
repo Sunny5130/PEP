@@ -282,19 +282,52 @@
 
 
 
-//------------------swap two numbers without using extfra variablr----------------------//
+ //------------------swap two numbers without using extfra variablr----------------------//
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int a,b;
+//     cin>>a>>b;
+//     //----first method using + - operator---------------//
+//     // a=a+b;
+//     // b=a-b;
+//     // a=a-b;
+//     //---------using xoroperation----------------//
+//     a=a^b;
+//     b=a^b;
+//     a=a^b;
+//     cout<<a<<" "<<b;
+// }
+
+
+//------------reverse an array without using extra space----------------//
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int a,b;
-    cin>>a>>b;
-    //----first method using + - operator---------------//
-    // a=a+b;
-    // b=a-b;
-    // a=a-b;
-    //---------using xoroperation----------------//
-    a=a^b;
-    b=a^b;
-    a=a^b;
-    cout<<a<<" "<<b;
+    int n;
+    cin>>n;
+    int arr[ n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    // int j=0;
+    // int rev[n];
+    // for(int i=n-1;i>=0;i--){
+    //     rev[j]=arr[i];
+    //     j++;
+    // }
+    // cout<<"Reverse of an array is : ";
+    // for(int i=0;i<n;i++){
+    //     cout<<rev[i]<<" ";
+    // }
+    int i=0,j=n-1;
+    while(i<=j){
+        swap(arr[i],arr[j]);
+        i++;
+        j--;
+    }
+    cout<<"Reverse of an array is : ";
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
 }
