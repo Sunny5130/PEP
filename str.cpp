@@ -193,28 +193,108 @@
 
 
 //-----------------------------Add binary string------------------------------//
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     string s1,s2;
+//     cin>>s1>>s2;
+//     int i=s1.length()-1;
+//     int j=s2.length()-1;
+//     int sum=0;
+//     int carry=0;
+//     string ans="";
+//     while(i>0 || j>0 || carry){
+//         sum=carry;
+//         if(i>=0)sum+=s1[i--]-'0';
+//         if(j>=0)sum+=s2[j--]-'0';
+//         ans+=sum%2+'0';
+//         carry=sum/2;
+//     }
+//     reverse(ans.begin(),ans.end());
+//     cout<<ans;
+// }
+
+
+
+//----------------------find elements in range not present in array---------------------//
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout << "Size of an array: ";
+//     cin >> n;
+
+//     vector<int> arr(n);
+//     cout << "Take an array input of size " << n << " : ";
+//     for (int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     int l, r;
+//     cout << "Take input of left and right range: ";
+//     cin >> l >> r;
+
+//     sort(arr.begin(), arr.end());
+
+//     int idx = 0;
+
+//     for (int x = l; x <= r; x++) {
+//         while (idx < n && arr[idx] < x)
+//             idx++;
+
+//         if (idx == n || arr[idx] != x) {
+//             cout << x << " ";
+//         }
+//     }
+
+//     return 0;
+// }
+
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout << "Size of an array: ";
+//     cin >> n;
+//     vector<int> arr(n);
+//     cout << "Take an array input of size " << n << " : ";
+//     for (int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+//     int l, r;
+//     cout << "Take input of left and right range: ";
+//     cin >> l >> r;
+//     unordered_map<int,int>map;
+//     for(int i=0;i<n;i++){
+//         map[arr[i]]++;
+//     }
+//     for (int x = l; x <= r; x++) {
+//         if (map.count(x)) {
+//             cout << x << " ";
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+
+//------------------swap two numbers without using extfra variablr----------------------//
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    string s1,s2;
-    cin>>s1>>s2;
-    int i=s1.length()-1;
-    int j=s2.length()-1;
-    int sum=0;
-    int carry=0;
-    string ans="";
-    while(i>0 || j>0 || carry){
-        sum=carry;
-        if(i>=0)sum+=s1[i--]-'0';
-        if(j>=0)sum+=s2[j--]-'0';
-        ans+=sum%2+'0';
-        carry=sum/2;
-    }
-    reverse(ans.begin(),ans.end());
-    cout<<ans;
+    int a,b;
+    cin>>a>>b;
+    //----first method using + - operator---------------//
+    // a=a+b;
+    // b=a-b;
+    // a=a-b;
+    //---------using xoroperation----------------//
+    a=a^b;
+    b=a^b;
+    a=a^b;
+    cout<<a<<" "<<b;
 }
-
-
-
-
-
