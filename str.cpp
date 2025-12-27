@@ -301,15 +301,15 @@
 
 
 //------------reverse an array without using extra space----------------//
-#include<bits/stdc++.h>
-using namespace std;
-int main(){
-    int n;
-    cin>>n;
-    int arr[ n];
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int n;
+//     cin>>n;
+//     int arr[ n];
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
     // int j=0;
     // int rev[n];
     // for(int i=n-1;i>=0;i--){
@@ -320,14 +320,34 @@ int main(){
     // for(int i=0;i<n;i++){
     //     cout<<rev[i]<<" ";
     // }
-    int i=0,j=n-1;
-    while(i<=j){
-        swap(arr[i],arr[j]);
-        i++;
-        j--;
+//     int i=0,j=n-1;
+//     while(i<=j){
+//         swap(arr[i],arr[j]);
+//         i++;
+//         j--;
+//     }
+//     cout<<"Reverse of an array is : ";
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+
+
+Node* insertatpos(Node* &head,int pos,int val){
+    Node* temp=head;
+    if(head==NULL){
+        Node* newNode=new node(val);
+        head=newNode;
     }
-    cout<<"Reverse of an array is : ";
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
+    int count=1;
+    while(count<pos-1){
+        temp=temp->next;
+        count++;
     }
+    Node* newNode==new Node(val);
+    newNode->next=temp->next;
+    temp->next=newNode;
+
+    return head;
 }
