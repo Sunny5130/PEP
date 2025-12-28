@@ -1,0 +1,21 @@
+/* Tailwind base, components, utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Global styles if needed */
+body {
+  font-family: 'Inter', sans-serif;
+}
+/* In your Tailwind CSS file or global CSS */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-bg {
+  background: linear-gradient(-45deg, #4ade80, #14b8a6, #22d3ee, #3b82f6);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
