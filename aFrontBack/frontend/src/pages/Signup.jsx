@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import API from '../services/api';
+import { useNavigate } from 'react-router-dom';
+
 
 const Signup = () => {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
+  const navigate = useNavigate(); // <-- useNavigate for redirect
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -12,6 +15,7 @@ const Signup = () => {
     try {
       await API.post('/signup', form);
       alert('Signup successful 🎉');
+      navigate('/login');
     } catch (err) {
       alert(err.response?.data?.message || 'Error');
     }

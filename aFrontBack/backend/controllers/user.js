@@ -38,7 +38,7 @@ const signin=async(req,res)=>{
         if(!ispass){ return res.status(401).status({message:"invalid password"})};
 
         const token=jwt.sign(
-            {userid:user._id,name: exitu.name},
+            {userid:exitu._id,name: exitu.name},
             process.env.Jwt_secret,
             {expiresIn:'1h'}
         );
@@ -46,7 +46,7 @@ const signin=async(req,res)=>{
             httpOnly:true,
             secure:process.env.NODE_ENV==="production",
             sameSite:"strict",
-            maxAge:60*60*60
+            maxAge:60*60*1000
         })
         return res.status(200).json({message:"User login Successfully",token});
 
@@ -84,7 +84,38 @@ const signin=async(req,res)=>{
         });
     }
 };
+//-------------------------------------update password----------------------------//
+const updatePassword=async(req,res)=>{
+    try{
+        const{password}=req.body;
+        const userId=req.user.userid;
+        if(!password){
+            return res.status(400).json({success:false,message:"Password is required"});
+        }
+        const haspass=await bcrypt.hash(password,10);
 
+        await user.findByIdAndUpdate(userId,{
+                password :haspass
+        });
+        return res.status(200).json({
+            success:true,
+            message:"Password Update Successfully"
+        });
+    }catch(err){
+        console.log("Password update fail",err);
+        res.status(500).json({success:false,message:"Password update failed"});
+    }
+}
 
+//------------------------------------Deleteaccount-------------------------------//
+const deleteAccount=async(req,res)=>{
+    try{
+        const userId=req.user.userid;
+        await user.findByIdAndDelete(userId);
+        return res.status(201).json({success:true,message:"User deleted Succesfully"});
+    }catch(err){
+        return res.status(400).json({success:false,message:"Unable to delete user"});
+    }
+}
 
-module.exports={signin,signup,logout};
+module.exports={signin,signup,logout,updatePassword,deleteAccount};
