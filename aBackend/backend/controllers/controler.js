@@ -121,3 +121,4 @@ const logout=async(req,res)=>{
     }
 }
 module.exports={signin,signup,deleteAccount,updatePassword,logout};
+
