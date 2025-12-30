@@ -31,7 +31,4 @@ router.get('/dashboard', authMiddleware, (req, res) => {
 router.put('/dashboard/updatepassword',authMiddleware,updatePassword);
 router.delete('/dashboard/deleteAccount',authMiddleware,deleteAccount);
 
-
-
-
 module.exports=router;
