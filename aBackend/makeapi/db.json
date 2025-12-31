@@ -1,0 +1,10 @@
+{
+    "post":[
+        {"name":"Sunny","age":"20"},
+        {"name":"Saini","age":"20"}
+    ],
+    "img":[
+        {"name":"ny","age":"23"},
+        {"name":"ini","age":"23"}        
+    ]
+}
