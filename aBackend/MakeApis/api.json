@@ -1,0 +1,34 @@
+{
+    "user":[
+        {"name":"Sunny","age":"21","mob":"82927482093"},
+        {"name":"Rohit","age":"20","mob":"234442393"}
+    ],
+    "posts":[
+        {"type":"holly","id":"12"},
+        {"type":"funny","id":"13"},
+        {"type":"funny","id":"930"}
+    ],
+    "vacancy":[
+  {"id":1,"for":"SDE","salary":"12 LPA","Type":"Part-time Internship"},
+  {"id":2,"for":"SDE","salary":"12 LPA","Type":"On campus drive"},
+  {"id":3,"for":"SDE","salary":"12 LPA","Type":"Full-time Internship"},
+  {"id":4,"for":"SDE","salary":"10 LPA","Type":"Off campus drive"},
+  {"id":5,"for":"Backend Developer","salary":"9 LPA","Type":"Full-time"},
+  {"id":6,"for":"Frontend Developer","salary":"8 LPA","Type":"Internship"},
+  {"id":7,"for":"Full Stack Developer","salary":"11 LPA","Type":"On campus drive"},
+  {"id":8,"for":"Data Analyst","salary":"7 LPA","Type":"Internship"},
+  {"id":9,"for":"Data Scientist","salary":"14 LPA","Type":"Full-time"},
+  {"id":10,"for":"ML Engineer","salary":"15 LPA","Type":"On campus drive"},
+
+  {"id":11,"for":"SDE","salary":"13 LPA","Type":"Full-time"},
+  {"id":12,"for":"Backend Developer","salary":"9 LPA","Type":"Internship"},
+  {"id":13,"for":"Frontend Developer","salary":"8 LPA","Type":"Part-time Internship"},
+  {"id":14,"for":"Full Stack Developer","salary":"12 LPA","Type":"Full-time"},
+  {"id":15,"for":"QA Engineer","salary":"6 LPA","Type":"On campus drive"},
+  {"id":16,"for":"DevOps Engineer","salary":"14 LPA","Type":"Full-time"},
+  {"id":17,"for":"Cloud Engineer","salary":"13 LPA","Type":"Internship"},
+  {"id":18,"for":"Android Developer","salary":"7 LPA","Type":"Internship"},
+  {"id":19,"for":"iOS Developer","salary":"9 LPA","Type":"Full-time"},
+  {"id":20,"for":"Web Developer","salary":"6 LPA","Type":"On campus drive"}
+    ]
+}
