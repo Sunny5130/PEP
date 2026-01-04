@@ -1,7 +1,6 @@
-const User=require('../Models/user.js');
+const user=require('../Models/user.js');
 const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');
-const user = require('../Models/user.js');
 //---------------------signup----------------//
 const signup=async(req,res)=>{
     try{
@@ -9,13 +8,13 @@ const signup=async(req,res)=>{
         if(!name ||!email ||!password){
            return res.status(400).json({message:"All fiels are requirred"});
         }
-        const exituser=await User.findOne({email});
+        const exituser=await user.findOne({email});
         if(exituser){
             return res.status(409).json({sucess:false,message:"User already registered"});
         }
         const hasspassword=await bcrypt.hash(password,10);
 
-        await User.create({
+        await user.create({
             name,email,password:hasspassword
         });
        return res.status(201).json({sucess:true,message:"User register Successfully"});
@@ -33,7 +32,7 @@ try{
     if(!email || !password){
         return res.status(400).json({message:"All fields are required"})
     };
-    const exitemail=await User.findOne({email});
+    const exitemail=await user.findOne({email});
     if(!exitemail){
         return res.status(401).json({sucess:false,message:"User is not registered with this email"});
     }
@@ -43,17 +42,17 @@ try{
     }
     
     const token=jwt.sign(
-        {userid:User._id},
+        {userid:exitemail._id,name:exitemail.name},
         process.env.Secret_key,
         {expiresIn:'1h'}
     )
     res.cookie("token",token,{
-        httponly:true,
+        httpOnly:true,
         secure:process.env.NODE_ENV==="Production",
-        samesite:'strict',
-        MaxAge:60*60*1000
+        sameSite:'strict',
+        maxAge:60 * 60 * 1000
     });
-    return res.status(201).json({token,message:"User Login Successfully"});
+    return res.status(200).json({token,message:"User Login Successfully"});
 
 }catch(err){
     console.log("Login error",err);
@@ -63,19 +62,16 @@ try{
 //-------------------------------------Password update--------------------------------------//
 const updatePassword=async(req,res)=>{
     try{
-        const{email,password}=req.body;
-        if(!email || !password){
-            return res.status(400).json({message:"All fields are requireed"})
-        };
-        const exituser=await User.findOne({email});
-
-        if(!exituser){
-            return res.status(401).json({sucess:false,message:"User is not registered with this email"})
+        const{password}=req.body;
+        if(!password){
+            return res.status(400).json({message:"Password is requireed"})
         };
         const hasspassword=await bcrypt.hash(password,10);
-        await User.findOneAndUpdate(exituser._id,{
+        console.log("Userid: ",req.user.userid);
+        await user.findByIdAndUpdate(req.user.userid,{
             password:hasspassword}
         );
+        console.log("User password update successfully")
         return res.status(201).json({sucess:true,message:"Password update sucessfull"});
     }catch(err){
         console.log("error",err);
@@ -85,21 +81,22 @@ const updatePassword=async(req,res)=>{
 //-------------------------------------Delete account----------------------------------------//
 const deleteAccount=async(req,res)=>{
     try{
-        const{email,password}=req.body;
-        if(!email || !password){
-            return res.status(400).json({message:"All fields are requireed"})
-        };
-        const exituser=await User.findOne({email});
-        if(!exituser){
-            return res.status(401).json({sucess:false,message:"User is not registered with this email"})
-        };
-        const ispass=await bcrypt.compare(password,exituser.password);
-        if(!ispass){
-            return res.status(400).json({sucess:false,message:"Password is incorrect"});
-        }
-        await User.findByIdAndDelete(exituser._id);
-      
-        return res.status(201).json({sucess:true,message:"User account deleted from database"});
+        // const{email,password}=req.body;
+        // if(!email || !password){
+        //     return res.status(400).json({message:"All fields are requireed"})
+        // };
+        // const exituser=await user.findOne({email});
+        // if(!exituser){
+        //     return res.status(401).json({sucess:false,message:"User is not registered with this email"})
+        // };
+        // const ispass=await bcrypt.compare(password,exituser.password);
+        // if(!ispass){
+        //     return res.status(400).json({sucess:false,message:"Password is incorrect"});
+        // }
+        await user.findByIdAndDelete(req.user.userid);
+        console.log("User account deleted successfully");
+        return logout(req, res);                        //agar logout ho gaya hai toh ab response logout ka jayega useraccount delete ka nahi
+        // return res.status(200).json({sucess:true,message:"User account deleted from database"});
     }catch(err){
         console.log("error",err);
         return res.status(500).json({sucess:false,message:"There is error to deleting account"})

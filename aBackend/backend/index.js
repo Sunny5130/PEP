@@ -1,17 +1,21 @@
 const express=require('express');
 const mongoose  = require('mongoose');
+const Parser=require("cookie-parser");
 const app=express();
-const router=require('./routes/route.js');
+const user=require('./routes/route.js');
+const post=require('./routes/post.js');
 require("dotenv").config();
 
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
+app.use(Parser());
 
 app.get('/',(req,res)=>{
     res.send("Welcome ji at front page");
 })
-app.use('/api',router);
+app.use('/user',user);
+app.use('/post',post);
 
 const Port=process.env.Port || 3001;
 app.listen(Port,()=>{

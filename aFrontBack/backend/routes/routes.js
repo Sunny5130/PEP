@@ -11,7 +11,7 @@ router.get('/',(req,res)=>{
 
 router.post('/login',signin);
 router.post('/signup',signup);
-router.post('/logout',logout);
+router.post('/logout',authMiddleware,logout);
 
 
 router.post('/dashboard', authMiddleware, (req, res) => {
