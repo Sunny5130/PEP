@@ -1,0 +1,11 @@
+# Ignore environment files (any folder)
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Ignore node_modules in all subprojects
+node_modules/
+**/node_modules/
