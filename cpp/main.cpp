@@ -240,17 +240,189 @@
 //     }
 // }
 
-#include<bits/stdc++.h>
-using namespace std;
-int main(){
-    int n;
-    cin>>n;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=n-i;j++)cout<<" ";
-        for(int s=1;s<=i;s++)cout<<"*";
-        cout<<endl;
-    }
-}
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int n;
+//     cin>>n;
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<=n-i;j++)cout<<" ";
+//         for(int s=1;s<=i;s++)cout<<"*";
+//         cout<<endl;
+//     }
+// }
 
+// #include<bits/stdc++.h>
+// using namespace std;
+// bool prime(int n){
+//     if(n<=1)return false;
+//     bool flag=true;
+//         for(int i=2;i*i<=n;i++){
+//         if(n%i==0){
+//             flag=false;
+//         }
+//     }
+//     if(flag==true)return true;
+//     return false;
+// }
+// int main(){
+//     int n;
+//     cin>>n;
+//     for(int i=1;i<n;i++){
+//         if(prime(i))cout<<i<<" ";
+//     }
+//     return 0;
+// }
+
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     string s;
+//     getline(cin,s);
+//     int i=0,j=s.length()-1;
+//     while(i<=j){
+//         if(s[i]!=s[j]){
+//             cout<<"String is not palindrome";
+//             return 0;
+//         }
+//         i++;j--;
+//     }
+//     cout<<"string is palindrome";
+//     return 0;
+// }
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     string s;
+//     getline(cin,s);
+//     // unordered_map<char,int>map;
+//     // for(int i=0;i<s.length();i++)map[s[i]]++;
+//     int maxi=0;
+//     string res="";
+//     string ans="";
+//     for(int i=0;i<s.length();i++){
+//         if(s[i]==' '){
+//             if(ans.length()>maxi){
+//                 res=ans;
+//                 maxi=ans.length();
+//             }
+//             ans="";
+//         }else{
+//             ans+=s[i];
+//         }
+//     }
+//     if(ans.length()>maxi){
+//         res=ans;
+//         maxi=ans.length();
+//             } 
+//     cout<<"The word is: "<<res<<" and length is: "<<maxi<<endl;
+//     return 0;
+// }
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     string s;
+//     getline(cin,s);
+//     map<string,int>map;
+//     string res="";
+//     for(int i=0;i<s.length();i++){
+//         if(s[i]==' '){
+//             map[res]++;
+//             res="";
+//         }else{
+//             res+=s[i];
+//         }
+//     }
+//     map[res]++;
+//     for(auto it=map.begin();it!=map.end();it++){
+//         cout<<it->first<<" count is: "<<it->second<<endl;
+//     }
+//     return 0;
+// }
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int n;
+//     cin>>n;
+//     int orig=n;
+//     int rev=0;
+//     while(n>0){
+//         int d=n%10;
+//         rev=rev*10+d;
+//         n=n/10;
+//     }
+//     if(rev==orig)cout<<"palindrome";
+//     else cout<<"Not palindrome";
+// }
+
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int a;
+//     cin>>a;
+//     vector<int>nums(a);
+//     for(int i=0;i<a;i++){
+//         cin>>nums[i];
+//     }
+//     // set<int>set(nums.begin(),nums.end());
+//     // for(auto it:set){
+//     //     cout<<it<<" ";
+//     // }
+//     map<int,int>map;
+//     for(int i=0;i<a;i++)map[nums[i]]++;
+//     for(auto it:map){
+//         cout<<it.first<<" freq: "<<it.second<<endl;
+//     }
+// }
+
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int n;
+//     cin>>n;
+//     int a=0,b=1;
+//     int term;
+//     cin>>term;
+//     int count=0;
+//     for(int i=0;i<n;i++){
+//         int c=a+b;
+//         // cout<<c<<" ";
+//         count++;
+//         if(count==term){
+//             cout<<"the "<<term<<" of fabnocci series is: "<<c;
+//             return 0;
+//         }
+//         a=b;
+//         b=c;
+//     }
+//     return 0;
+// }
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int a,b;
+//     cin>>a>>b;
+//     int mini=min(a,b);
+//     int maxi=0;
+//     for(int i=1;i<=mini;i++){
+//         if(a%i==0 && b%i==0){
+//             maxi=max(i,maxi);
+//         }
+//     }
+//     cout<<"Hcf of "<<a<<" and "<<b<<" is: "<<maxi;
+// }
 
 
