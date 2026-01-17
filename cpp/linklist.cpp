@@ -14,6 +14,7 @@ class Node{
 Node* insertAtbig(Node* &head,int val){
     if(head==NULL){
         Node* temp=new Node(val);
+        temp->next=head;
         return temp;
     }
     Node* temp=new Node(val);
