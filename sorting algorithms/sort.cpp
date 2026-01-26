@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-////////-------------------------------------insertion sorting---------------------------------/////////
+////////-------------------------------------Selection sorting---------------------------------/////////
 void selectionsort(int arr[],int n){
     for(int i=0;i<n-1;i++){
         int mini=i;

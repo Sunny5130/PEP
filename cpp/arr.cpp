@@ -36,3 +36,6 @@ int main(){
     cout<<"The GCD of "<<a<<" and" <<b<<" is "<<maxi;
     return 0;
 }
+
+
+
