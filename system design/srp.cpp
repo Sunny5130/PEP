@@ -64,4 +64,8 @@ int main(){
     savedbcart* save=new savedbcart(cart);
     cout<<endl;
     save->savecarttodb();
+    cout<<endl;
+    cart->insertprod(new product("formal shoes",499));
+    print->printproducts();
+    print->totalrate();
 }
