@@ -480,7 +480,13 @@ using namespace std;
 
 
 //------------------------file handling-----------------------------
-
+int main(){
+    // ofstream file("abc.txt");
+    // file<<"hello ji";
+    // file.close();
+    ifstream file("abc.txt");
+    // cout<<file;
+}
 
 //-----------------------------operator oveloading-------------------------------//
 
