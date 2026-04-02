@@ -428,8 +428,8 @@
 // }
 
 
-import java.util.*;
-public class arr{
+// import java.util.*;
+// public class arr{
     // static boolean counts(String s){
     //     int count=0;
     //     for(int i=1;i<s.length();i++){
@@ -456,8 +456,8 @@ public class arr{
     //     if(flag)return true;
     //     else return false;
     // }
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
+    // public static void main(String[] args){
+    //     Scanner sc=new Scanner(System.in);
 
 
 
@@ -614,15 +614,135 @@ capital letter: "The", "Brown", and "Fox". */
 
 
 
+//reverse an integer
+// import java.util.*;
+// public class java{
+//     public static void main(String[] args){
+//         Scanner sc=new Scanner(System.in);
+//         int n=sc.nextInt();
+//         // int ans=0;
+//         // while(n!=0){
+//         //     int d=n%10;
+//         //     ans=d+(ans*10);
+//         //     n=n/10;
+//         // }
+//         // System.out.println("Reverse of number: "+ans);
+
+//         //or
+//         String s=Integer.toString(n);
+//         String ans="";
+//         for(int i=s.length()-1;i>=0;i--){
+//             ans+=s.charAt(i);
+//         }
+//         int rev=Integer.parseInt(ans);
+//         System.out.println(rev);
+//         sc.close();
+//     }
+// }
+
+
+//count vowels and consonents
+// import java.util.*;
+// public class arr{
+//     public static void main(String[] args){
+//         Scanner sc=new Scanner(System.in);
+//         String s=sc.nextLine();
+//         String str=s.toLowerCase();
+//         int vow=0,con=0;
+//         for(int i=0;i<str.length();i++){
+//             if(Character.isAlphabetic(str.charAt(i))){
+//                 if(str.charAt(i)=='a' || str.charAt(i)=='e' ||str.charAt(i)=='i' ||str.charAt(i)=='o' ||str.charAt(i)=='u'){
+//                     vow+=1;
+//                 }else{
+//                     con+=1;
+//                 }
+//             }
+//         }
+//         System.out.println("vowels: "+vow);
+//         System.out.println("Consonents: "+con);
+//         sc.close();
+//     }
+// }
+
+
+
+
+
+//Print consonents in lowercase as equence
+
+
+// import java.util.*;
+// public class arr{
+//     public static void main(String[] args){
+//         Scanner sc=new Scanner(System.in);
+//         String s=sc.nextLine();
+//         String str=s.toLowerCase();
+//         String con="";
+//         for(int i=0;i<str.length();i++){
+//             if(Character.isAlphabetic(str.charAt(i))){
+//                 if(str.charAt(i)=='a' || str.charAt(i)=='e' ||str.charAt(i)=='i' ||str.charAt(i)=='o' ||str.charAt(i)=='u'){
+//                 }else{
+//                     con+=str.charAt(i);
+//                 }
+//             }
+//         }
+//         System.out.println("Consonents in lowercase: " +con);
+
+//         sc.close();
+//     }
+// }
+
+
+// print smallest vowle no as ascii value
+// import java.util.*;
+// public class arr{
+//     public static void main(String[] args){
+//         Scanner sc=new Scanner(System.in);
+//         String s=sc.nextLine();
+//         String ans="";
+//         for(int i=0;i<s.length();i++){
+//             if(s.charAt(i)=='a'|| s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u'){
+//                 ans+=s.charAt(i);
+//             }
+//         }
+//         char[] arr=ans.toCharArray();
+//         Arrays.sort(arr);
+//         System.out.println("smallest vowel: "+arr[0]);
+//         System.out.println("Asscii value: "+(int)arr[0]);
+//         sc.close();
+//     }
+// }
 
 
 
 
 
 
+//Count Uppercase and lowercase in string
 
-
-
+import java.util.*;
+public class arr{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int low=0,upe=0;
+        for(int i=0;i<s.length();i++){
+            // if(Character.isAlphabetic(s.charAt(i))){
+            //     if(Character.isLowerCase(s.charAt(i))){
+            //         low++;
+            //     }else{
+            //         upe++;
+            //     }
+            // }
+            char c=s.charAt(i);
+            if(c>='a' && c<='z'){
+                low++;
+            }else if(c>='A' && c<='Z'){
+                upe++;
+            }
+        }
+        System.out.println("Uppercase letter are: "+upe);
+        System.out.println("Lowercase letter are: "+low);
         sc.close();
     }
 }
