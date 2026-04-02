@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>UI revision</title>
+</head>
+<body>
+    <!-- there are two types of tages (1)inline means in block new line or zero space or take all space from left to right  and(2) inline means space within line -->
+
+    <!-- block tags -->
+    <h1>heading</h1>
+    <p>parapgraph</p>
+    <div>Div</div>
+    <section>section</section>
+    <article>article</article>
+
+    <br><br><br><br>
+
+<!-- inline tags -->
+    <span>span</span>
+    <img src="abc.jpg" alt="">
+    <a href="https://leetcode.com/u/_sainisunny/">link</a>
+    <strong>strong</strong>
+    <em>i am em</em>
+
+    <br><br><br><br><br><br>
+
+    <!-- semantic tags are provide a scence to easy readability or better for screen reading or used in search engine optimization -->
+     <!-- eg header, navigation,section, article,footer -->
+      <header>This is site header</header>
+      <nav>this is navbar</nav>
+<section>
+        <article>
+        <h1>heading</h1>
+        <p>this is paragraph</p>
+    </article>
+</section>
+     <footer>this is footer</footer>
+
+     <br><br><br><br><br>
+     <!-- Forms in html used to collect user input and send it through to server -->
+      <form action="server_url" method="get"></form>  <!-- action means where we are going to send data url or server-- or -->
+                                                     <!-- get means data will visible in url and in post doesn't shows for security purpose-->
+
+
+    <form action="#" method="POST">
+        <h1>this is a signup form</h1>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="name" placeholder="name" disabled>
+        <br>
+        <label for="password">Passowrd:</label>
+        <input type="text" name="pasord" id="pass" readonly placeholder="you can't write read only">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" >
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age">
+        <br>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">female
+        <input type="radio" name="gender" value="others">others
+        <br>
+        <label for="hobby">Hobby:</label>
+        <input type="checkbox" name="hobby" value="music">music
+        <input type="checkbox" name="hobby" value="dancing">dancing
+        <input type="checkbox" name="hobby" value="playing">playing
+        <br>
+        <button type="reset">Reset</button>
+        <button type="submit">submit</button>
+
+    </form>
+    <br><br><br><br><br><br><br>
+
+
+    <!-- Textarea -->
+     <label for="story">story:</label>
+     <textarea name="story" id="tx">
+        Hello my name is _sainisunnny
+        form narnaul
+        doing study
+     </textarea>
+
+     <br><br><br><br>
+
+     <!-- dropdown list  using select and option tags-->
+      <label for="country">country:</label>
+     <select name="country" id="countr">
+        <option value="india">india</option>
+        <option value="China">China</option>
+        <option value="Malasia">Malasia</option>
+        <option value="Singapur">Singapur</option>
+     </select>
+     <br><br><br><br><br>
+
+
+     <!-- table in html -->
+     <label for="table">table</label>
+      <table border="1" name="table">
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>class</th>
+        </tr>
+        <tr>
+            <td>sunny</td>
+            <td>22</td>
+            <td>12th</td>
+        </tr>
+        <tr>
+            <td>Rohit</td>
+            <td>22</td>
+            <td>11th</td>
+        </tr>
+        <tr>
+            <td>Manish</td>
+            <td>22</td>
+            <td>12</td>
+        </tr>
+      </table>
+      <br><br>
+     <!-- table2 in html colepan and rowspan -->
+     <label for="table">table2</label>
+      <table border="1" name="table">
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>class</th>
+        </tr>
+        <tr>
+            <td>sunny</td>
+            <td colspan="2">merged</td>
+        </tr>
+        <tr>
+            <td>Rohit</td>
+            <td>22</td>
+            <td>11th</td>
+        </tr>
+        <tr>
+            <td>Manish</td>
+            <td>22</td>
+            <td>12</td>
+        </tr>
+      </table>
+      <br><br>
+
+      <!-- anchor tags -->
+      <a href="https://google.com" target="_blank" title="Open Google">Open Google</a><br>
+      <a href="pract.html" target="_top" title="open link to pract page">pract page</a>
+
+      <!-- list -->
+       <!-- unordered list  shows dots-->
+        <ul>
+            <li>abc</li>
+            <li>xyz</li>
+            <li>pqr</li>
+        </ul>
+        <br><br>
+        <!-- ordered list shows numbers -->
+         <ol>
+            <li>Abc</li>
+            <li>Xyz</li>
+            <li>Pqr</li>
+         </ol>
+         <br><br>
+         <!--Descriptive list  -->
+         <dl>
+          <dt>HTML</dt>
+          <dd>HyperText Markup Language</dd>
+
+          <dt>CSS</dt>
+          <dd>Used for styling</dd>
+        </dl>
+        <br>
+
+        <!--  -->
+     
+</body>
+</html>
