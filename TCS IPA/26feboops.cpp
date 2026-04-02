@@ -350,16 +350,27 @@ using namespace std;
 // }
 
 //exception handling-------------
+// int main(){
+//     try{
+//         int x,y;
+//         cin>>x>>y;
+//         if(y==0){
+//             throw "denominator should not be zero";
+//         }else{
+//             cout<<"A/b: "<<x/y;
+//         }
+//     }catch(const char* err){
+//         cout<<err;
+//     }
+// }
+class Saini{
+    public:
+    char a;
+    char b;
+    char c;
+    int d; double e;
+};
 int main(){
-    try{
-        int x,y;
-        cin>>x>>y;
-        if(y==0){
-            throw "denominator should not be zero";
-        }else{
-            cout<<"A/b: "<<x/y;
-        }
-    }catch(const char* err){
-        cout<<err;
-    }
+    Saini s;
+    cout<<sizeof(s);
 }
