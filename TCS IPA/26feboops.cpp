@@ -365,10 +365,14 @@ using namespace std;
 // }
 class Saini{
     public:
-    char a;
+    int a;
     char b;
-    char c;
-    int d; double e;
+    void pera(){
+
+    }
+    int ss(){
+        return 0;
+    }
 };
 int main(){
     Saini s;
