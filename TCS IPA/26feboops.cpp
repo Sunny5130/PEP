@@ -363,18 +363,40 @@ using namespace std;
 //         cout<<err;
 //     }
 // }
+// class Saini{
+//     public:
+//     int a;
+//     char b;
+//     void pera(){
+
+//     }
+//     int ss(){
+//         return 0;
+//     }
+// };
+// int main(){
+//     Saini s;
+//     cout<<sizeof(s);
+// }
+
+
+
+
+
+//practice
 class Saini{
     public:
-    int a;
-    char b;
     void pera(){
-
+        cout<<"This is pera function of Saini cla";
     }
-    int ss(){
-        return 0;
+};
+class Saini2: public Saini{
+    public:
+    void pera(){
+        cout<<"This is pera function of Saini2 class";
     }
 };
 int main(){
-    Saini s;
-    cout<<sizeof(s);
+    Saini2 *s=new Saini2();
+    s->pera();
 }
