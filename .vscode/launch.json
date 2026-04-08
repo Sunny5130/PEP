@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Demo",
+            "request": "launch",
+            "mainClass": "Demo",
+            "projectName": "Dsa Practice_1991250"
+        },
+        {
+            "type": "java",
             "name": "Interface",
             "request": "launch",
             "mainClass": "Interface",
