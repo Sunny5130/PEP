@@ -1069,4 +1069,641 @@ import java.util.*;
 // }
 
 
+
+/* Count number of word in a string
+*Note : Always ignore the spaces if more than 1 space given between two word
+
+
+Sample Input : 1
+------------------------
+Kalyani Goverment Engineering College
+
+Process
+---------------------------
+[Kalyani, Goverment, Engineering, College]
+
+Output
+---------------------------
+Number of word : 4
+*************************************
+Sample Input : 2
+------------------------
+Kalyani Goverment  Engineering College
+
+Process
+---------------------------
+[Kalyani, Goverment, , Engineering, College]
+
+Output
+---------------------------
+Number of word : 4
+*/
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner sc=new Scanner(System.in);
+//         String s=sc.nextLine();
+//         int count=0;
+//         String[] arr=s.split(" ");
+//         for(int i=0;i<arr.length;i++){
+//             if(arr[i].length()>1){
+//                 count++;
+//             }
+//         }
+//         System.out.println("Words: "+count);
+//         sc.close();
+//     }
+// }
+
+
+
+/*
+    * Count the number of words in a sentence that contain at least two consecutive vowels (a, e, i, o, u) in them.
+    * Here's a sample input and output:
+    * 
+    * Input: I enjoy eating spaghetti and meatballs for dinner
+    * Output: 2
+
+    * Explanation: There are two words in the sentence that contain at least two consecutive vowels - "enjoy" and "meatballs".
+ */
+
+
+// public class Main{
+//     public static boolean countcowel(String s){
+//         String b=s.toLowerCase();
+//         for(int i=1;i<b.length();i++){
+//             if((b.charAt(i)=='a' || b.charAt(i)=='e' || b.charAt(i)=='i' || b.charAt(i)=='o' || b.charAt(i)=='u')&&
+//             (b.charAt(i-1)=='a' || b.charAt(i-1)=='e' || b.charAt(i-1)=='i' || b.charAt(i-1)=='o' || b.charAt(i-1)=='u')){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+//     public static void main(String[] args){
+//         Scanner sc=new Scanner(System.in);
+//         String s=sc.nextLine();
+//         String st="";
+//         int count=0;
+//         for(int i=0;i<s.length();i++){
+//             if(s.charAt(i)==' '){
+//                 if(countcowel(st)){
+//                     count++;
+//                 }
+//                 st="";
+//             }else{
+//                 st+=s.charAt(i);
+//             }
+//         }
+//         if(countcowel(st))count++;
+//         System.out.println(count);
+
+//     }
+// }
+
+
+
+/*
+ * Question:
+    Write a Java program that reads an array of 5 integers from the user. Then, take two integer limits, limit1 and limit2, as input. Your task is to find the average (as an integer) of all the integers in the array that are strictly greater than limit1 and strictly less than limit2. Implement a method called findAverage which accepts the array and the two limits as parameters and returns the average of the qualifying integers as an integer. The result should be the integer division of the sum by the count. If no integers qualify, the program should handle this scenario by avoiding division by zero.
+    For example, given the array [1, 10, 5, 8, 12] and limits 4 and 10, the qualifying numbers would be 5 and 8, and the average would be (5 + 8) / 2 = 6 (as an integer).
+    Input Format:
+    1. The first 5 inputs are integers representing the array elements.
+    2. The next two inputs are integers representing the limit1 and limit2 values.
+
+    Output Format:
+    - Print the average of the integers that satisfy the condition of being greater than limit1 and less than limit2, as an integer.
+    Example:
+    Input:
+    1 10 5 8 12
+    4 10
+    Output:
+    6
+ */
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner sc=new Scanner(System.in);
+//         int[] arr=new int[5];
+//         for(int i=0;i<5;i++){
+//             arr[i]=sc.nextInt();
+//         }
+//         int a=sc.nextInt();
+//         int b=sc.nextInt();
+//         int totoal=0,count=0;
+//         for(int i=0;i<5;i++){
+//             if(arr[i]>a &&arr[i]<b){
+//                 totoal+=arr[i];
+//                 count++;
+//             }
+//         }
+//         if(count==0){
+//             System.out.println(0);
+//         }else{
+//         System.out.println("Average: "+ totoal/count);
+//         }
+
+
+//     }
+// }
+
 //-----------------------------------(9)---------------------------------
+// // You are given the coordinates of two points in a 2D plane. The task is to calculate the Euclidean distance between these two points and print the result formatted to three decimal places.
+// //  Input:
+// // - The first line contains two integers, x1 and y1, representing the coordinates of the first point.
+// // - The second line contains two integers, x2 and y2, representing the coordinates of the second point.
+// //  Output:
+// // - Output the Euclidean distance between the two points, formatted to three decimal places.
+// // 1 2
+// // 4 6
+// // Output:
+// // 5.000
+// import java.util.*;
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner sc=new Scanner(System.in);
+//             int a=sc.nextInt();
+//             int b=sc.nextInt();sc.nextLine();
+//             int c=sc.nextInt();
+//             int d=sc.nextInt();
+//         double total=0;
+//         total=Math.sqrt(((c-a)*(c-a))+((d-b)*(d-b)));
+//         System.out.printf("%.3f",total);
+//     }
+// }
+
+// import java.util.*;
+
+
+
+//--------------------------------(10)------------------
+// public class Solution {
+//     public static void main(String args[] ) throws Exception {
+//         /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+//         Scanner sc = new Scanner(System.in);
+//         int x1 = sc.nextInt();
+//         int y1 = sc.nextInt();
+        
+//         Point p1 = new Point(x1, y1);
+        
+//         int x2  = sc.nextInt();
+//         int y2 = sc.nextInt();
+        
+//         Point p2 = new Point(x2, y2);
+        
+//         // Correctly calculate the distance using the Euclidean formula
+//         double ans = findDistance(p1, p2);
+        
+//         // Format the output to 3 decimal places
+//         System.out.format("%.3f", ans);
+        
+//         sc.close();
+//     }
+    
+//     // Calculate the Euclidean distance between two points
+//     public static double findDistance(Point p1, Point p2) {
+//         int x1 = p1.getX();
+//         int y1 = p1.getY();
+//         int x2 = p2.getX();
+//         int y2 = p2.getY();
+        
+//         // Return the Euclidean distance
+//         return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+//     }
+// }
+
+// class Point {
+//     private int x;
+//     private int y;
+    
+//     // Getter for x
+//     public int getX(){
+//         return this.x;
+//     }
+    
+//     // Getter for y
+//     public int getY(){
+//         return this.y;
+//     }
+    
+//     // Constructor to initialize x and y
+//     Point(int x, int y){
+//         this.x = x;
+//         this.y = y;
+//     }
+// }
+
+
+
+
+
+/*
+ * Question: Find the Lexicographically Smallest Character
+    You are given a string S consisting of lowercase English letters. Your task is to find the lexicographically smallest character in the string.
+
+    Input Format:
+    - A single line of input containing the string S.
+    Output Format:
+    - Print the lexicographically smallest character from the string S.
+
+    Constraints:
+    - The string S will have at least one character.
+    - The string S will contain only lowercase English letters ('a' to 'z').
+
+    Example:
+    Input 1: monkey
+    Output 1: e
+
+    Input 2: apple
+    Output 2: a
+ */
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner sc=new Scanner(System.in);
+//         String a=sc.nextLine();
+//         // char[] arr=a.toCharArray();
+//         // Arrays.sort(arr);
+//         // System.out.println(arr[0]);
+//         char mini=a.charAt(0);
+//         for(int i=0;i<a.length();i++){
+//             if(a.charAt(i)<mini){
+//                 mini=a.charAt(i);
+//             }
+//         }
+//         System.out.println(mini);
+
+//     }
+// }
+
+
+//----------------------------(11)IPA--------------
+//     Question Statement:
+
+// Write a Java program to manage information about books using object-oriented programming principles. You are required to create a class Book with the following attributes and methods:
+
+//  Class: Book
+// - Attributes:
+//   - id (int): A unique identifier for each book.
+//   - title (String): The title of the book.
+//   - author (String): The author of the book.
+//   - price (double): The price of the book.
+  
+// - Constructor: Create a parameterized constructor that initializes the id, title, author, and price of the book.
+
+// - Methods:
+//   - getId(): Returns the id of the book.
+//   - getTitle(): Returns the title of the book.
+//   - getAuthor(): Returns the author of the book.
+//   - getPrice(): Returns the price of the book.
+
+// You also need to write a method sortBooksByprice that accepts an array of Book objects and sorts them in ascending order based on their price using a lambda expression. The sorted array should be returned.
+
+//  Input:
+// - First, input details of 4 books (book ID, title, author, and price) in sequence.
+// - Each book's information is provided in the following order:
+//   - Book ID (integer)
+//   - Book title (string)
+//   - Book author (string)
+//   - Book price (double)
+
+//  Output:
+// - After sorting the books by their price in ascending order, output the details of the sorted books, including the ID, title, author, and price.
+
+//  Example:
+
+// Input:
+
+// 101
+// The Alchemist
+// Paulo Coelho
+// 499.99
+// 102
+// 1984
+// George Orwell
+// 299.99
+// 103
+// Harry Potter
+// J.K. Rowling
+// 999.99
+// 104
+// To Kill a Mockingbird
+// Harper Lee
+// 399.99
+
+
+// Output:
+
+// 102 1984 George Orwell 299.99
+// 104 To Kill a Mockingbird Harper Lee 399.99
+// 101 The Alchemist Paulo Coelho 499.99
+// 103 Harry Potter J.K. Rowling 999.99
+
+
+//  Requirements:
+// - Use an array to store the Book objects.
+// - Utilize a lambda expression to define the custom sorting logic based on the price.
+// - Implement getter methods for each attribute in the Book class.
+
+// class Book{
+//    private int id;
+//    private String title;
+//    private String author;
+//    private double price;
+//    Book(int a,String b,String c,double e){
+//       this.id=a;
+//       this.title=b;
+//       this.author=c;
+//       this.price=e;
+//    }
+//    //getter
+//    int getId(){return id;}
+//    String getTitle(){return title;}
+//    String getAuthor(){return author;}
+//    double getPrice(){return price;}
+// }
+// public class Main{
+//    public static Book[] sortt(Book[] arr){
+//       // ArrayList<Book>list=new ArrayList<>();
+//       // for(int i=0;i<arr.length;i++){
+//       //    list.add(arr[i]);
+//       // }
+//       // list.sort((a,b)->Double.compare(a.getPrice(),b.getPrice()));
+//       // Book[] ans=new Book[list.size()];
+//       // for(int i=0;i<list.size();i++){
+//       //    ans[i]=list.get(i);
+//       // }
+//       // return ans;
+//       Arrays.sort(arr,(a,b)->Double.compare(a.getPrice(),b.getPrice()));
+//       return arr;
+//    }
+//    public static void main(String[] args){
+//       Scanner sc=new Scanner(System.in);
+//       Book[] arr=new Book[4];
+//       for(int i=0;i<4;i++){
+//          int a=sc.nextInt();sc.nextLine();
+//          String b=sc.nextLine();
+//          String c=sc.nextLine();
+//          double d=sc.nextDouble();sc.nextLine();
+//          arr[i]=new Book(a,b,c,d);
+//       }
+//       Book[] ans=sortt(arr);
+//       for(int i=0;i<ans.length;i++){
+//          System.out.println(ans[i].getId()+" "+ans[i].getTitle()+" "+ans[i].getAuthor()+" "+ans[i].getPrice());
+//       }
+//    }
+// }
+
+
+
+//--------------------------(12)------------------
+// Question Statement:
+// Write a Java program to manage information about documents using object-oriented programming principles. You are required to create a class Document with the following attributes and methods:
+
+// Class: Document
+// Attributes:
+
+// id (int): A unique identifier for each document.
+// title (String): The title of the document.
+// folderName (String): The folder where the document is stored.
+// pages (int): The number of pages in the document.
+// Constructor: Create a parameterized constructor that initializes the id, title, folderName, and pages of the document.
+
+// Methods:
+
+// getId(): Returns the id of the document.
+// getTitle(): Returns the title of the document.
+// getFolderName(): Returns the folder name of the document.
+// getPages(): Returns the number of pages in the document.
+// You also need to write a method docsWithOddPages that accepts an array of Document objects and filters out the documents with an odd number of pages. The filtered documents should be sorted by their id in ascending order and returned.
+
+// Input:
+// First, input details of 4 documents (document ID, title, folder name, and number of pages) in sequence.
+// Each document's information is provided in the following order:
+// Document ID (integer)
+// Document title (string)
+// Document folder name (string)
+// Number of pages (integer)
+// Output:
+// After filtering and sorting the documents with an odd number of pages, output the details of the sorted documents, including the ID, title, folder name, and number of pages.
+// Example:
+// Input:
+
+// Copy code
+// 101
+// Project Report
+// Work
+// 45
+// 102
+// Assignment
+// Study
+// 50
+// 103
+// Invoice
+// Work
+// 33
+// 104
+// Presentation
+// Office
+// 22
+// Output:
+
+// Copy code
+// 101 Project Report Work 45
+// 103 Invoice Work 33
+// Requirements:
+// Use an array to store the Document objects.
+// Use a lambda expression to define the sorting logic based on the document id.
+// Implement getter methods for each attribute in the Document class.
+// Filter out documents with an odd number of pages and sort them by id in ascending order before outputting.
+
+
+// class Document{
+//    private int id;
+//    private String title;
+//    private String author;
+//    private int price;
+//    Document(int a,String b,String c,int e){
+//       this.id=a;
+//       this.title=b;
+//       this.author=c;
+//       this.price=e;
+//    }
+//    //getter
+//    int getId(){return id;}
+//    String getTitle(){return title;}
+//    String getAuthor(){return author;}
+//    int getPrice(){return price;}
+// }
+// public class Main{
+//    public static Document[] sortt(Document[] arr){
+//       ArrayList<Document>list=new ArrayList<>();
+//       for(int i=0;i<arr.length;i++){
+//          if(arr[i].getId()%2!=0){
+//          list.add(arr[i]);
+//          }
+//       }
+//       list.sort((a,b)->Double.compare(a.getId(),b.getId()));
+//       Document[] ans=new Document[list.size()];
+//       for(int i=0;i<list.size();i++){
+//          ans[i]=list.get(i);
+//       }
+//       return ans;
+     
+//    }
+//    public static void main(String[] args){
+//       Scanner sc=new Scanner(System.in);
+//       Document[] arr=new Document[4];
+//       for(int i=0;i<4;i++){
+//          int a=sc.nextInt();sc.nextLine();
+//          String b=sc.nextLine();
+//          String c=sc.nextLine();
+//          int d=sc.nextInt();sc.nextLine();
+//          arr[i]=new Document(a,b,c,d);
+//       }
+//       Document[] ans=sortt(arr);
+//       for(int i=0;i<ans.length;i++){
+//          System.out.println(ans[i].getId()+" "+ans[i].getTitle()+" "+ans[i].getAuthor()+" "+ans[i].getPrice());
+//       }
+//    }
+// }
+
+
+
+//-------------------------IPA(14)-Day(12)---------------------------------
+// Question:
+// Done earlier
+
+// Develop a Java program that performs the following tasks:
+
+// 1. Define a class named Laptop with the following private attributes:
+//    - int laptopId
+//    - String brand
+//    - String osType
+//    - double price
+//    - int rating
+
+//    Provide appropriate getters for laptopId, brand, osType, and rating, and a constructor to initialize all attributes.
+
+// 2. In the main method, inside public class named as MyClass:
+//    - Accept input for 4 Laptop objects. For each laptop, read the following details:
+//      - laptopId (integer)
+//      - brand (string)
+//      - osType (string)
+//      - price (double)
+//      - rating (integer)
+//    - After reading the details, input a brand and an osType to search.
+
+// 3. Implement two static methods:
+//    - public static int countOfLaptopsByBrand(Laptop[] arr, String brand)
+//      - This method should return the count of laptops in the array arr that match the given brand (case-insensitive) and have a rating greater than 3.
+//    - public static Laptop[] searchLaptopByOsType(Laptop[] arr, String osType)
+//      - This method should return an array of laptops that match the given osType (case-insensitive). The returned array should be sorted in descending order of laptopId.
+//      - If no laptops are found matching the osType, return null.
+
+// 4. In the main method, perform the following:
+//    - Call countOfLaptopsByBrand and print the count. If the count is zero, print "The given brand is not available".
+//    - Call searchLaptopByOsType and print the laptopId and rating of each laptop found. If no laptops are found, print "The given os is not available".
+
+// ---
+
+//  Class and Method Details:
+
+// - Class Name: Laptop
+//   - Attributes:
+//     - laptopId (int): Unique identifier for the laptop.
+//     - brand (String): Brand name of the laptop.
+//     - osType (String): Operating system type (e.g., Windows, macOS).
+//     - price (double): Price of the laptop.
+//     - rating (int): Customer rating of the laptop.
+
+// - Methods:
+//   - Constructor: Initializes all attributes.
+//   - Getters:
+//     - getLaptopId(): Returns laptopId.
+//     - getBrand(): Returns brand.
+//     - getOsType(): Returns osType.
+//     - getRating(): Returns rating.
+
+// - Static Methods:
+//   - countOfLaptopsByBrand(Laptop[] arr, String brand): Counts laptops matching the brand with a rating above 3.
+//   - searchLaptopByOsType(Laptop[] arr, String osType): Finds and sorts laptops matching the osType.
+
+// ---
+
+//  Input Format:
+
+// For each of the 4 laptops:
+
+// <int>       // laptopId
+// <String>    // brand
+// <String>    // osType
+// <double>    // price
+// <int>       // rating
+
+// After entering laptop details:
+
+// <String>    // brand to search
+// <String>    // osType to search
+
+
+//  Sample Input:
+
+
+// 101
+// Dell
+// Windows
+// 800.50
+// 4
+// 102
+// HP
+// Windows
+// 750.00
+// 5
+// 103
+// Apple
+// macOS
+// 1200.00
+// 5
+// 104
+// Lenovo
+// Linux
+// 650.75
+// 3
+// Dell
+// Windows
+
+
+//  Expected Output:
+
+
+// 1
+// 102
+// 5
+// 101
+// 4
+
+
+// ---
+
+//  Explanation:
+
+// - First Part: Counting laptops by brand "Dell" with a rating greater than 3.
+//   - Only one laptop (laptopId 101) matches.
+//   - Output: 1
+
+// - Second Part: Searching laptops by osType "Windows".
+//   - Two laptops match (laptopId 101 and 102).
+//   - They are sorted in descending order of laptopId.
+//   - Output:
+    
+//     102
+//     5
+//     101
+//     4
+    
+//------------------------------Day(15)
+public class Saini{
+   
+}
+public class Main{
+   public static void main(String[] args){
+
+   }
+}
