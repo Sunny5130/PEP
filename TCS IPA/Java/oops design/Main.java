@@ -1700,9 +1700,246 @@ Number of word : 4
 
 
 // ---------------------Day(15)-Java practise questions------------------------
+// public class Main{
+//    static boolean isprime(int n){
+//       boolean flag=true;
+//       if(n<2)return false;
+//       for(int i=2;i*i<=n;i++){
+//          if(n%i==0){
+//             flag=false;
+//             break;
+//          }
+//       }
+//       if(!flag)return false;
+//       else return true;
+//    }
+//    public static void main(String[] args){
+//       Scanner sc=new Scanner(System.in);
+//       int n=sc.nextInt();
+//       int count=0;
+//       while(n!=0){
+//          int d=n%10;
+//          if(isprime(d))count++;
+//          n=n/10;
+//       }
+//       System.out.println("prime digits: "+count);
+//       sc.close();
+//    }
+// }
 public class Main{
    public static void main(String[] args){
       Scanner sc=new Scanner(System.in);
+
+
+      // String sa=sc.nextLine();
+      // String s=sa.toUpperCase();
+      // int c=0,v=0,d=0;
+      // for(int i=0;i<s.length();i++){
+      //    if(s.charAt(i)>='0' && s.charAt(i)<='9')d++;
+      //    else if(s.charAt(i)=='A' || s.charAt(i)=='E' ||s.charAt(i)=='I' ||s.charAt(i)=='O' ||s.charAt(i)=='U')v++;
+      //    else if(s.charAt(i)==' ');
+      //    else c++;
+      // }
+      // System.out.println("Vowels: "+v);
+      // System.out.println("Consonent: "+c);
+      // System.out.println("Digits: "+d);
+
+
+
+      // String s=sc.nextLine();
+      // System.out.println(s.substring(3));
+      // System.out.println(s.substring(2,5));
+      // System.out.println(s.indexOf("sunny"));
+      // System.out.println(s.indexOf(s.lastIndexOf("sunny")));
+      // char[] arr=s.toCharArray();
+      // System.out.println(Arrays.toString(arr));
+
+
+
+
+      // String s=sc.nextLine();
+      // String ans="";
+      // for(int i=0;i<s.length();i++){
+      //    // if(s.charAt(i)>='a' && s.charAt(i)<='z'){
+      //    //    ans+=s.charAt(i);
+      //    // }
+      //    if(Character.isLowerCase(s.charAt(i))){
+      //       ans+=s.charAt(i);
+      //    }
+      // }
+      // System.out.println(ans);
+
+
+
+      // char ch=sc.next().charAt(0);
+      // String s=Character.toString(ch);
+      // System.out.println(s);
+      // s+="ans";
+      // System.out.println(s);
+
+
+
+      // String s=sc.nextLine();
+      // String ans="";
+      // String[] arr=s.split(" ");
+      // for(int i=0;i<arr.length;i++){
+      //    ans+=arr[i].substring(0,1).toUpperCase();
+      // }
+      // System.out.println(ans);
+
+
+
+      //longest non repeating substring
+      // String s=sc.nextLine();
+      // String lon="";
+      // for(int i=0;i<s.length();i++){
+      //    boolean[] visit=new boolean[256];
+      //    for(int j=i;j<s.length();j++){
+      //       char ch=s.charAt(j);
+      //       if(visit[ch])break;
+      //       visit[ch]=true;
+      //       String sub=s.substring(i,j+1);
+      //       if(sub.length()>lon.length()){
+      //          lon=sub;
+      //       }
+      //    }
+      // }
+      // System.out.println("longest: "+lon);
+
+
+
+
+
+      //intersection of two array
+   //    int n=sc.nextInt();
+   //    int m=sc.nextInt();
+   //    int[] nums1=new int[n];
+   //    int[] nums2=new int[m];
+   //    for(int i=0;i<n;i++){
+   //       nums1[i]=sc.nextInt();
+   //    }
+   //    for(int i=0;i<m;i++){
+   //       nums2[i]=sc.nextInt();
+   //    }
+   //    Arrays.sort(nums1);
+   //    Arrays.sort(nums2);
+   //    ArrayList<Integer>list=new ArrayList<>();
+   //    int i=0,j=0;
+   //    while(i<n && j<m){
+   //       if(nums1[i]==nums2[j]){
+   //          list.add(nums1[i]);
+   //          i++;
+   //       }else if(nums1[i]>nums2[j]){
+   //             j++;
+   //       }else{
+   //          i++;
+   //       }
+   //    }
+   //    if(list.size()==0){
+   //       System.out.println("no intersection elements");
+   //    }else{
+   //    for(int k=0;k<list.size();k++){
+   //       System.out.print(list.get(k)+" ");
+   //    }
+   // }
+
+
+
+
+
+
+      // int n=sc.nextInt();
+      // int[] arr=new int[n];
+      // for(int i=0;i<n;i++){
+      //    arr[i]=sc.nextInt();
+      // }
+      // int maxi=Integer.MIN_VALUE;
+      // int mini=Integer.MAX_VALUE;
+      // for(int i=0;i<n;i++){
+      //    maxi=Math.max(maxi,arr[i]);
+      //    mini=Math.min(mini,arr[i]);
+      // }
+      // System.out.println("Mini: "+mini);
+      // System.out.println("Maxi: "+maxi);
+      
+
+
+      // String s=sc.nextLine();
+      // String[] nums=s.split(" ");
+      // String ans="";
+      // for(int i=0;i<nums.length;i++){
+      //    if(nums[i].length()>ans.length()){
+      //       ans=nums[i];
+      //    }
+      // }
+      // System.out.println("Longest word is: "+ans);
+
+
+
+      // String s=sc.nextLine();
+      // String[] nums=s.split(" ");
+      // String ans="";
+      // for(int i=0;i<nums.length;i++){
+      //    // ans+=nums[i].substring(nums[i].length()-1,nums[i].length());
+      //    ans+=nums[i].charAt(nums[i].length()-1);
+      // }
+      // System.out.println(ans);
+
+
+      // //majority element
+
+      // int n=sc.nextInt();
+      // int[] arr=new int[n];
+      // for(int i=0;i<n;i++){
+      //    arr[i]=sc.nextInt();
+      // }
+      // Arrays.sort(arr);
+      // int count=1,ans=0;
+      // for(int i=1;i<n;i++){
+      //    if(arr[i-1]==arr[i]){
+      //       count++;
+      //    }else{
+      //       if(count>n/2){
+      //          ans=arr[i-1];
+      //          break;
+      //       }
+      //       count=1;
+      //    }
+      // }
+      // if(count>n/2){
+      //    ans=arr[n-1];
+      // }
+      // System.out.println(ans);
+
+
+
+      //Maximum ascii element
+
+      // String s=sc.nextLine();
+      // int ans=Integer.MIN_VALUE;
+      // char car=s.charAt(0);
+      // for(int i=0;i<s.length();i++){
+      //    char ch=s.charAt(i);
+      //    if(ch>ans){
+      //       ans=ch;
+      //       car=ch;
+      //    }
+      // }
+      // System.out.println(car+": "+ans);
+
+
+      //palindrome check word
+
+
+
+
+
+
+
+
+
+      //first non repeating character
+      //lowest and maxi freq element
 
       sc.close();
    }
