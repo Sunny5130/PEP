@@ -1697,13 +1697,15 @@ Number of word : 4
 //     5
 //     101
 //     4
-    
-//------------------------------Day(15)
-public class Saini{
-   
-}
+
+
+// ---------------------Day(15)-Java practise questions------------------------
 public class Main{
    public static void main(String[] args){
+      Scanner sc=new Scanner(System.in);
 
+      sc.close();
    }
 }
+
+//------------------------------Day(15)-IPA(17)-------------cd..------------
